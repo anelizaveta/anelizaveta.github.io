@@ -1,0 +1,61 @@
+H1 {
+  text-shadow: 1px 1px white,
+               2px 2px #777;
+  color: #333;
+  transition: all 1s;
+  }
+  H1:hover {
+    text-shadow: 1px 1px white,
+                 2px 2px tomato;
+    color: crimson;
+    }
+</style>
+</head>
+<body>
+<script>
+function func(){
+st='<h1 class="elegantshadow">'
+n=document.getElementById("a_znach").value;
+y=n
+x=n%10
+a=(n-x)/10
+n=100*x+a
+document.getElementById("a").innerHTML =st+"2.25= "+ n+"</h1>";
+x=(y-y%100)/100
+a=y%100
+n=10*a+x
+document.getElementById("b").innerHTML =st+"2.27= "+ n+"</h1>";
+  x=((y-y%100)/10+y%10)
+n=(y%100-y%10)*10+x
+
+document.getElementById("c").innerHTML =st+"2.29= "+ n+"</h1>";
+x=((y-y%100)/10+y%10)
+n=10*x+(y%100-y%10)/10
+document.getElementById("d").innerHTML =st+"2.31= "+ n+"</h1>";
+x=y%10
+a=(y%100-x)+(y-y%100)/100
+n=100*x+a
+document.getElementById("e").innerHTML =st+"2.33= "+ n+"</h1>";
+}
+</script>
+______________________________________________
+<br>
+<br>
+n=<input type="text" value="0" id="a_znach">
+<br>
+<br>
+<button onclick="func()"> knopka </button>
+<br>
+<br>
+<div id="a"></div>
+<div id="b"></div>
+<div id="c"></div>
+<div id="d"></div>
+<div id="e"></div>
+
+<br>
+<br>
+<br>
+
+</body>
+</html>
