@@ -1,0 +1,99 @@
+<html> 
+<head> 
+<title>canvasExample</title> 
+<meta charset='utf-8' /> 
+<style> 
+a.button.purple { 
+background: #e8c4e4; 
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e8c4e4), to(#d698d0)); 
+background: -moz-linear-gradient(#e8c4e4, #d698d0); 
+background: linear-gradient(#e8c4e4, #d698d0); 
+border: solid 1px #da9fd4; 
+border-bottom: solid 3px #946890; 
+box-shadow: inset 0 0 0 1px #f2dcef; 
+color: #7b5777; 
+text-shadow: 0 1px 0 #eacae6; } 
+a.button.purple:hover { 
+background: #daa2d4; 
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#daa2d4), to(#e0b1db)); 
+background: -moz-linear-gradient(#daa2d4, #e0b1db); 
+background: linear-gradient(#daa2d4, #e0b1db); 
+border: solid 1px #ca91c4; 
+border-bottom: solid 3px #946890; 
+box-shadow: inset 0 0 0 1px #e9c7e6; } 
+a.button.purple:active { 
+background: #d49ace; 
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#d49ace), to(#cc94c6)); 
+background: -moz-linear-gradient(#d49ace, #cc94c6); 
+background: linear-gradient(#d49ace, #cc94c6); 
+border: solid 1px #8e678a; 
+box-shadow: inset 0 10px 15px 0 #ba87b5; } 
+</style> 
+<script> 
+function clean(){ 
+var canvas = document.getElementById('example'); 
+var ctx = canvas.getContext('2d'); 
+ctx.fillStyle = "white"; 
+ctx.fillRect(0, 0, 480, 320); 
+ctx.closePath(); 
+} 
+function er1(){ 
+  clean();
+var canvas = document.getElementById('example'); 
+var ctx = canvas.getContext('2d'); 
+ctx.beginPath();
+drawpoint1();
+drawpoint2();
+ctx.stroke();
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value);
+var b=Math.sqrt(x);
+var R=Math.sqrt(y/Math.PI);
+var h=Math.sqrt(2*b*b);
+if (R<h/3) {
+  alert( 'круг умещается в треугольнике' );
+} else {
+  if (2*R>h) {
+  alert( 'треугольник умещается в круге' );
+} else {
+  alert( 'пересечение' );  
+}
+}
+}
+function drawpoint1() { 
+x=Number(document.getElementById("x_znach").value); 
+x=240+x*100; 
+var b=Math.sqrt(x*4/Math.sqrt(3));
+var h=(b*Math.sqrt(3))/2
+var canvas = document.getElementById('example'); 
+var ctx = canvas.getContext('2d'); 
+ctx.beginPath(); 
+ctx.strokeStyle = 'green'; 
+ctx.moveTo(240, 160-2/3*h);
+ctx.lineTo(240+1/2*b, 160+1/3*h);
+ctx.lineTo(240-1/2*b, 160+1/3*h);
+ctx.closePath();
+ctx.stroke(); 
+}
+function drawpoint2() { 
+y=Number(document.getElementById("y_znach").value);
+y=160+y*100;
+var canvas = document.getElementById('example'); 
+var ctx = canvas.getContext('2d'); 
+ctx.beginPath(); 
+ctx.strokeStyle = 'green'; 
+ctx.arc(240, 160, Math.sqrt(y/Math.PI), 0 ,2 * Math.PI) 
+ctx.stroke();
+}
+</script> 
+</head> 
+<body> 
+Площадь треугольника=<input type="text" value="0" id="x_znach">
+Площадь круга=<input type="text" value="0" id="y_znach">
+<a href="#" onclick="clean()" class="button purple">очистить</a> 
+<a href="#" onclick="er1()" class="button purple">кнопка</a> 
+
+<canvas width='480' height='320' id='example'>Обновите браузер</canvas> 
+<br> 
+</body> 
+</html>
