@@ -1,0 +1,90 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="style2">
+  <script>
+    
+    function func1() {
+    
+      var i = 20;
+      while (i < 36) {
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i+ " "+ "<br>";
+        i++;
+      }
+    }
+
+    function func2() {
+      n = Number(document.getElementById("n_f2_znach").value);
+      var i = 10;
+      do {
+        document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML + i*i + "<br>";
+        i++;
+      } while (i < n);
+    }
+
+    function func3() {
+      var a = Number(document.getElementById("a_f3_znach").value);
+      
+     do {
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + a*a*a + "<br>";
+        a++;
+        } while (a < 50)
+      }
+      
+      function func4() {
+     var  a = Number(document.getElementById("a_f4_znach").value);
+      var b = Number(document.getElementById("b_f4_znach").value);
+    
+     do {
+        document.getElementById("otvet4").innerHTML = document.getElementById("otvet4").innerHTML + a + "<br>";
+        a++;
+        } while (a <= b)
+      }
+
+  
+  </script>
+</head>
+
+<body>
+
+
+  <h1>Цикл а</h1>
+    <div id="otvet1"></div>
+  <a href="#" onclick="func1()" class="action-button shadow animate blue">1</a>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл б</h1>  n=
+  <input type="text" value="0" id="n_f2_znach">
+  <div id="otvet2"></div>
+  <br>
+  <a href="#" onclick="func2()" class="action-button shadow animate red">2</a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл в</h1> a=
+  <input type="text" value="0" id="a_f3_znach">
+  <div id="otvet3"></div>
+  <br>
+  <a href="#" onclick="func3()" class="action-button shadow animate yellow">3</a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл г</h1>  a=
+  <input type="text" value="0" id="a_f4_znach">
+  b=
+  <input type="text" value="0" id="b_f4_znach">
+  <div id="otvet4"></div>
+  <br>
+  <a href="#" onclick="func4()" class="action-button shadow animate green">4</a>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
