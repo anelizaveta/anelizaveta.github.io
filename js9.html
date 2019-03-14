@@ -1,0 +1,97 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    
+    function func1() {
+    
+      var i = 20;
+      while (i < 36) {
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i+ " "+ "<br>";
+        i++;
+      }
+    }
+
+    function func2() {
+      n = Number(document.getElementById("n_f2_znach").value);
+      var i = 10;
+      do {
+        document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML + i*i + "<br>";
+        i++;
+      } while (i < n);
+    }
+
+ function func3() {
+      a = Number(document.getElementById("a_f3_znach").value);
+      for (;a<50;) {
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + a*a*a + "<br>";
+        a++;
+        } 
+      }
+      
+      
+     function func4() {
+      a = Number(document.getElementById("a_f4_znach").value);
+       b = Number(document.getElementById("b_f4_znach").value);
+      for(;a<b;) {
+        document.getElementById("otvet4").innerHTML = document.getElementById("otvet4").innerHTML + a + "<br>";
+        a++;
+      } 
+    }
+
+  
+  </script>
+</head>
+
+<body>
+
+
+  <h1>Цикл а</h1>
+	<a href="#" onclick="func1()"  title='Title 1'>
+        &#x2606;
+      </a>
+    <div id="otvet1"></div>
+  
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл б</h1>  n=
+  <input type="text" value="0" id="n_f2_znach">
+  <div id="otvet2"></div>
+  <br>
+  <a href="#" onclick="func2()" title= 'Title 2'>
+        &#x2606;
+      </a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл в</h1> a=
+  <input type="text" value="0" id="a_f3_znach">
+  <div id="otvet3"></div>
+  <br>
+  <a href="#" onclick="func3()"  title='Title 3'>
+        &#x2606;
+      </a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл г</h1>  a=
+  <input type="text" value="2" id="a_f4_znach">
+  b=
+  <input type="text" value="16" id="b_f4_znach">
+  <div id="otvet4"></div>
+  <br>
+  <a href="#" onclick="func4()"  title='Title 4'>
+        &#x2606;
+      </a>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
