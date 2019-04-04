@@ -1,0 +1,41 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="style1.css">
+  <script>
+  
+  var checkbox = document.getElementById("chbx1");
+  
+  function foo(){
+   if(checkbox.checked=true){
+       func1()
+         } }
+         
+         function func1() {
+      a = Number(document.getElementById("n_f1_znach").value);
+       b = Number(document.getElementById("n_f2_znach").value);
+      var i = a;
+      var S=1;
+      while (i <= b) {
+        S=S*i;
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i +" "+ S + "<br>";
+        i++;
+      } 
+    }
+    
+     </script>
+</head>
+
+<body>
+  
+   <h1>произведение целых чисел от а до b</h1> 
+    a= <input type="text" value="6" id="n_f1_znach">
+  b= <input type="text" value="9" id="n_f2_znach">
+  
+    <span class="toggle">
+       <input type="checkbox" id="chbx1" onchange="func1()">
+ <label data-off="fire" data-on="hope"></label></span>
+  <div id="otvet1"></div>
+</body>
+</html>
