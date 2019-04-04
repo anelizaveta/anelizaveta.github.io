@@ -1,0 +1,47 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="style1.css">
+  <script>
+  
+  var checkbox = document.getElementById("chbx1");
+  
+  function foo(){
+   if(checkbox.checked=true){
+       func1()
+         } }
+         
+         function func1() {
+      a = Number(document.getElementById("n_f1_znach").value);
+       b = Number(document.getElementById("n_f2_znach").value);
+        document.getElementById("otvet1").innerHTML = "";
+      var i = a;
+      var c=0
+      var S=0;
+      while (i <= b) {
+         c++;
+        S=S+i;
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i +" "+ S + "<br>";
+       
+        i++;
+      } 
+      
+      document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + S/c-- + "<br>";
+    }
+    
+     </script>
+</head>
+
+<body>
+  
+   <h1>среднее арифметическое целых чисел от а до b</h1> 
+    a= <input type="text" value="1" id="n_f1_znach">
+  b= <input type="text" value="10" id="n_f2_znach">
+  
+    <span class="toggle">
+       <input type="checkbox" id="chbx1" onchange="func1()">
+ <label data-off="koul" data-on="sloul"></label></span>
+  <div id="otvet1"></div>
+</body>
+</html>
