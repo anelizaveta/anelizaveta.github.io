@@ -1,0 +1,45 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="style2.css">
+  <script>
+  
+  var checkbox = document.getElementById("chbx1");
+  
+  function foo(){
+   if(checkbox.checked=true){
+       func1()
+         } }
+         
+         function func1() {
+      a = Number(document.getElementById("n_f1_znach").value);
+       
+        document.getElementById("otvet1").innerHTML = "";
+      var i = 1;
+      var S=0;
+      while (i <= a) {
+        
+        S=S+1/i;
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i +" "+ S + "<br>";
+       
+        i++;
+      } 
+   
+    }
+    
+     </script>
+</head>
+
+<body>
+  
+   <h1>Цикл 5.32</h1> 
+    a= <input type="text" value="1" id="n_f1_znach">
+
+  
+    <span class="toggle">
+       <input type="checkbox" id="chbx1" onchange="func1()">
+ <label data-off="oops" data-on="ouch"></label></span>
+  <div id="otvet1"></div>
+</body>
+</html>
