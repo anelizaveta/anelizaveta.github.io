@@ -1,0 +1,44 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="style2.css">
+  <script>
+  
+  var checkbox = document.getElementById("chbx1");
+  
+  function foo(){
+   if(checkbox.checked=true){
+       func1()
+         } }
+         
+         function func1() {
+     
+       
+        document.getElementById("otvet1").innerHTML = "";
+      var i = 2;
+      var S=0;
+      while (i <= 10) {
+        
+        S=S+i/(i+1);
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i +" "+ S + "<br>";
+       
+        i++;
+      } 
+   
+    }
+    
+     </script>
+</head>
+
+<body>
+  
+   <h1>Цикл 5.33</h1> 
+  
+  
+    <span class="toggle">
+       <input type="checkbox" id="chbx1" onchange="func1()">
+ <label data-off="niht" data-on="yeah"></label></span>
+  <div id="otvet1"></div>
+</body>
+</html>
